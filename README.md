@@ -1,21 +1,41 @@
 # DIO - Trilha .NET - Explorando a linguagem C#
-www.dio.me
+Este repositório contém o código do desafio de projeto da trilha .NET - Explorando a linguagem C# (www.dio.me).
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de explorando a linguagem C#, da trilha .NET da DIO.
+## Desafio de projeto :bulb: 
+O objetivo do desafio é implementar um sistema de hospedagem funcional para gerenciar reservas de um hotel, garantindo regras de validação e cálculo dinâmico de preços.
 
-## Contexto
-Você foi contratado para construir um sistema de hospedagem, que será usado para realizar uma reserva em um hotel. Você precisará usar a classe Pessoa, que representa o hóspede, a classe Suíte, e a classe Reserva, que fará um relacionamento entre ambos.
+## Contexto :hotel:
+O sistema de hospedagem foi desenvolvido para:
+- Gerenciar hóspedes e reservas em um hotel.
+- Relacionar hóspedes, suítes e reservas.
+- Calcular o valor correto das diárias com base em regras definidas.
 
-O seu programa deverá cálcular corretamente os valores dos métodos da classe Reserva, que precisará trazer a quantidade de hóspedes e o valor da diária, concedendo um desconto de 10% para caso a reserva seja para um período maior que 10 dias.
+## Funcionalidades Implementadas :computer:
+### Validação de Regras
+- Capacidade da Suíte: Não é possível realizar uma reserva de uma suíte com capacidade menor do que a quantidade de hóspedes. Exemplo: Caso a suíte comporte 2 pessoas, uma tentativa de reservar para 3 hóspedes resultará em uma exceção.
+- Quantidade de Hóspedes: O método ObterQuantidadeHospedes retorna a quantidade total de hóspedes cadastrados.
+- Cálculo de Diárias: O método CalcularValorDiaria calcula o valor da diária com base nos dias reservados e no valor da suíte. Um desconto de 10% é aplicado automaticamente para reservas de 10 ou mais dias.
 
-## Regras e validações
-1. Não deve ser possível realizar uma reserva de uma suíte com capacidade menor do que a quantidade de hóspedes. Exemplo: Se é uma suíte capaz de hospedar 2 pessoas, então ao passar 3 hóspedes deverá retornar uma exception.
-2. O método ObterQuantidadeHospedes da classe Reserva deverá retornar a quantidade total de hóspedes, enquanto que o método CalcularValorDiaria deverá retornar o valor da diária (Dias reservados x valor da diária).
-3. Caso seja feita uma reserva igual ou maior que 10 dias, deverá ser concedido um desconto de 10% no valor da diária.
+### Estrutura do Sistema
+- Classe Pessoa: Representa os hóspedes.
+- Classe Suíte: Representa as suítes disponíveis no hotel, contendo informações como tipo, capacidade e valor da diária.
+- Classe Reserva: Faz o relacionamento entre hóspedes e suítes, gerenciando as reservas e aplicando as regras de validação e cálculo.
 
+### Dinâmica de Uso
+- Cadastro de hóspedes em uma reserva.
+- Atribuição de uma suíte específica a uma reserva.
+- Cálculo automático de valores, considerando regras de desconto.
+
+## Regras do Desafio :white_check_mark:
+1. Implementação das regras descritas no contexto.
+2. Desenvolvimento do sistema de forma robusta e seguindo boas práticas de codificação.
+3. Adaptação das funcionalidades aos requisitos propostos.
 
 ![Diagrama de classe estacionamento](diagrama_classe_hotel.png)
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+## Conclusão :trophy:
+O desafio foi concluído com sucesso, implementando todas as regras e funcionalidades propostas. O código foi estruturado para ser claro, escalável e fácil de manter.
+
+Se tiver interesse em colaborar ou discutir melhorias, sinta-se à vontade para entrar em contato! 😊
+
+Autora: Kezia Oliveira
